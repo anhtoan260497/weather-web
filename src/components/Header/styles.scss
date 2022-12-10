@@ -1,0 +1,124 @@
+#header {
+    width: 10%;
+    border: 1px solid blue;
+    height: 100%;
+    transition: width 0.5s ease;
+    font-family: "Ubuntu", sans-serif;
+
+    .page-icon {
+        img {
+            width: 100px;
+            height: 100px;
+            margin: 20px 0;
+        }
+
+        .header-title {
+            font-size: 30px;
+            width: 0;
+            opacity: 0;
+            transition: width 0 ease, opacity 0.2s ease;
+            font-family: "Ubuntu", sans-serif;
+            font-weight: 600;
+        }
+    }
+
+    .header-item {
+        // border:1px solid red;
+        width: 100%;
+        min-height: 60px;
+        margin-top: 25px;
+
+        &:nth-child(2) {
+            margin-top: 0;
+        }
+
+        &-icon {
+            padding: 10px;
+            border-radius: 10px;
+            background-color: rgb(236, 236, 243);
+
+            .icon {
+                font-size: 30px;
+                color: rgb(158, 158, 167);
+                width: 30px;
+                height: 25px;
+            }
+        }
+    }
+
+    .header-item-description {
+        opacity: 0;
+        width: 0;
+        transition: width 0 ease, opacity 0.2s ease;
+        font-size: 20px;
+        color: rgb(158, 158, 167);
+    }
+
+    .show {
+        width: fit-content;
+        opacity: 1;
+        transition: width 0.5s ease, opacity 0.5s ease;
+    }
+
+    .selected {
+        .header-item-icon {
+            background-color: rgb(163, 158, 180);
+
+            .icon {
+                font-size: 30px;
+                color: white;
+                width: 30px;
+                height: 25px;
+            }
+        }
+    }
+
+    &:hover {
+        width: 20%;
+        transition: width 0.5s ease;
+
+        .page-icon {
+            .header-title {
+                opacity: 1;
+                width: 100%;
+                transition: width 0.5s ease, opacity 0.2s ease;
+            }
+        }
+
+        .header-item {
+            justify-content: flex-start;
+            padding-left: 30px;
+            width: 100%;
+        }
+    }
+}
+
+@media only screen and (max-width: 1199px) {
+    #header {
+        .page-icon {
+            .header-title {
+                font-size: 22px;
+            }
+        }
+    }
+}
+
+@media only screen and (max-width: 991px) {
+    #header {
+        width: 10%;
+
+        .page-icon {
+            .header-title {
+                font-size: 20px;
+            }
+        }
+
+        .header-item-description {
+            font-size: 16px;
+        }
+
+        &:hover {
+            width: 25%;
+        }
+    }
+}
