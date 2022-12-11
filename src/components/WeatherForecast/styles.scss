@@ -1,0 +1,22 @@
+.weather-forecast {
+    width: calc((100% / 12) * 8);
+    background-color: rgb(33, 73, 170);
+    border-radius: 20px;
+    height: 100%;
+    padding:  20px 40px;
+    color : white;
+
+    &-title {
+        margin: 20px 0;
+        font-size: 18px;
+
+        .bold {
+            font-weight: 600;
+            font-size: 32px;
+
+            span {
+                font-weight: 200;
+            }
+        }
+    }
+}

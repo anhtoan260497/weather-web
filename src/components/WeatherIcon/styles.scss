@@ -1,0 +1,16 @@
+.weather-icon {
+    width: 120px;
+    height: 100%;
+    border : 3px solid rgba(255,255,255,0.2);
+    border-radius: 20px;
+    position: relative;
+
+    .degree {
+        position: absolute;
+        top : -14px;
+        right: 10px;
+        background-color: rgb(33, 73, 170);
+        padding : 0 5px;
+        z-index: 1;
+    }
+}
